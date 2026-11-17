@@ -259,6 +259,20 @@ footer{text-align:center;padding:28px 20px;background:#123f4a;color:#e9f7fa}
 .preview-story-footer .video-chip{margin:0;padding:5px 7px}
 .preview-toolbar{margin-top:auto;display:flex;justify-content:space-around;gap:4px;padding:10px 1px 1px;font-size:9px;font-weight:800;color:#2b6d79}
 @media(max-width:560px){.phone{width:min(310px,78vw)}}
+
+/* Approved full-width StorySheet claymation artwork: preserve existing hero until image is loaded */
+.storysheet-banner{display:none;max-width:1320px;margin:20px auto 0;position:relative;z-index:3;text-align:center}
+.storysheet-banner-art{display:block;width:100%;height:auto;aspect-ratio:3/1;object-fit:contain;border-radius:25px;box-shadow:0 8px 0 #61aebc,0 18px 32px #245b6b33}
+.storysheet-banner-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:24px auto 0}
+html.storysheet-banner-loaded .storysheet-banner{display:block}
+html.storysheet-banner-loaded .hero-grid{display:none}
+html.storysheet-banner-loaded .hero{min-height:unset;padding-bottom:80px}
+@media(max-width:620px){
+ .storysheet-banner{margin-top:20px}
+ .storysheet-banner-art{border-radius:13px}
+ .storysheet-banner-actions{margin-top:17px;gap:10px}
+ .storysheet-banner-actions .cta{font-size:14px;min-height:45px;padding:10px 15px}
+}
 </style>
 <link rel="icon" type="image/png" href="/StorySheet-icon.png"><link rel="apple-touch-icon" href="/StorySheet-icon.png"><link rel="canonical" href="https://www.storysheetapp.com/">
 <link rel="stylesheet" href="/clay-theme.css">
@@ -268,6 +282,14 @@ footer{text-align:center;padding:28px 20px;background:#123f4a;color:#e9f7fa}
   <div class="topbar">
     <div class="brand"><img src="/StorySheet-icon.png" alt="StorySheet app icon"><span>StorySheet by FinnsMedia</span></div>
     <a class="home-link" href="https://www.storysheetapp.com/">StorySheet Home</a>
+  </div>
+
+    <div class="storysheet-banner" aria-label="StorySheet claymation banner">
+    <img class="storysheet-banner-art" src="/storysheet-clay-banner.png" alt="StorySheet: Turn your moments into your story. A colorful claymation scene with travel photos, a camera and a StorySheet phone preview." width="2172" height="724" onload="document.documentElement.classList.add('storysheet-banner-loaded')" onerror="this.hidden=true">
+    <div class="storysheet-banner-actions">
+      <a class="cta primary" href="https://apps.apple.com/us/app/storysheet/id6763627551" target="_blank" rel="noopener noreferrer"><span class="apple" aria-hidden="true">&#63743;</span> Download on the App Store</a>
+      <a class="cta secondary" href="#features">Explore StorySheet</a>
+    </div>
   </div>
 
   <div class="hero-grid">
