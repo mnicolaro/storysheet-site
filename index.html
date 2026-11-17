@@ -240,6 +240,25 @@ footer{text-align:center;padding:28px 20px;background:#123f4a;color:#e9f7fa}
   .topbar{align-items:center}
   .home-link{font-size:14px;padding:9px 12px}
 }
+
+/* Homepage preview: an actual photo-led StorySheet example instead of emoji placeholders */
+.phone{width:min(340px,82vw);aspect-ratio:9/18.5}
+.screen{padding:43px 12px 15px;background:linear-gradient(180deg,#92e0f4 0%,#d6f5fc 19%,#fff5e5 19%,#fff9f0 100%);display:flex;flex-direction:column}
+.preview-appbar{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:850;color:#245663;margin-bottom:12px}
+.preview-appbar img{width:20px;height:20px;border-radius:5px}
+.preview-dots{margin-left:auto;letter-spacing:2px;font-size:16px}
+.mini-title{font-size:20px;margin:0 0 3px}
+.preview-date{text-align:center;font-size:8px;letter-spacing:1.1px;font-weight:800;color:#52777e;margin-bottom:12px}
+.story-sheet{padding:10px;transform:rotate(-1.5deg)}
+.preview-story-label{font-size:12px;font-weight:850;color:#275665;text-align:center;padding:2px 0 9px}
+.preview-photos{grid-template-columns:1.25fr .75fr;grid-template-rows:83px 83px;gap:6px}
+.preview-photos img{display:block;width:100%;height:100%;object-fit:cover;border-radius:8px;background:#cceaf0}
+.preview-photos .preview-photo-main{grid-row:span 2}
+.story-sheet .caption{margin:11px 3px 7px;font-size:11px;line-height:1.45}
+.preview-story-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:10px;color:#41717c;font-weight:800}
+.preview-story-footer .video-chip{margin:0;padding:5px 7px}
+.preview-toolbar{margin-top:auto;display:flex;justify-content:space-around;gap:4px;padding:10px 1px 1px;font-size:9px;font-weight:800;color:#2b6d79}
+@media(max-width:560px){.phone{width:min(310px,78vw)}}
 </style>
 <link rel="icon" type="image/png" href="/StorySheet-icon.png"><link rel="apple-touch-icon" href="/StorySheet-icon.png"><link rel="canonical" href="https://www.storysheetapp.com/">
 <link rel="stylesheet" href="/clay-theme.css">
@@ -262,19 +281,24 @@ footer{text-align:center;padding:28px 20px;background:#123f4a;color:#e9f7fa}
       </div>
     </div>
 
-    <div class="phone-wrap" aria-hidden="true">
+    <div class="phone-wrap" aria-label="Illustrative StorySheet sample showing a travel photo story with captions and video">
       <div class="phone">
         <div class="notch"></div>
         <div class="screen">
-          <div class="mini-title">Our Weekend Story</div>
+          <div class="preview-appbar"><img src="/StorySheet-icon.png" alt=""><span>StorySheet</span><span class="preview-dots">•••</span></div>
+          <div class="mini-title">Our Coastal Getaway</div>
+          <div class="preview-date">WEEKEND MEMORIES · SEPTEMBER 2026</div>
           <div class="story-sheet">
-            <div class="photo-grid">
-              <div class="fake-photo">🌅</div>
-              <div class="fake-photo small">🥂</div>
+            <div class="preview-story-label">A weekend worth remembering</div>
+            <div class="photo-grid preview-photos">
+              <img class="preview-photo-main" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Scenic landscape on a weekend trip" loading="eager">
+              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt="Mountain lakeside scenery" loading="eager">
+              <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&amp;fit=crop&amp;w=360&amp;q=80" alt="Outdoor scenery in warm light" loading="eager">
             </div>
-            <div class="caption">A perfect weekend — good views, great company, and the little moments we wanted to remember.</div>
-            <div class="video-chip">▶ Short video included</div>
+            <div class="caption"><strong>Sunsets, fresh air &amp; favorite memories.</strong><br>We found time to slow down, explore, and enjoy the little moments together.</div>
+            <div class="preview-story-footer"><span>✦ Our story</span><span class="video-chip">▶ Video clip</span></div>
           </div>
+          <div class="preview-toolbar"><span>▦ Layouts</span><span>✎ Captions</span><span>◉ Backgrounds</span></div>
         </div>
       </div>
     </div>
