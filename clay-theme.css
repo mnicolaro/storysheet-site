@@ -1,0 +1,28 @@
+/* FinnsMedia-inspired coastal claymation design system — visual styling only */
+:root{--clay-sky:#bceeff;--clay-aqua:#54c6dc;--clay-teal:#087b8b;--clay-orange:#ff9b38;--clay-ink:#174750;--clay-cream:#fff8e9}
+html{scroll-behavior:smooth}
+body{color:var(--clay-ink)!important;background:radial-gradient(ellipse at 8% 14%,#fff9e8 0,transparent 27%),radial-gradient(ellipse at 94% 42%,#fee6bb 0,transparent 30%),linear-gradient(180deg,#b6ebfc 0%,#e8f9fd 44%,#fff8e9 100%)!important}
+body>div:first-of-type:not(.hero){background:linear-gradient(125deg,#76d5f0 0%,#b6edff 45%,#ffd396 100%)!important;color:#174750!important;padding:48px 20px 60px!important;position:relative;overflow:hidden;box-shadow:inset 0 -9px 0 #fff9e9}
+body>div:first-of-type:not(.hero)::before,body>div:first-of-type:not(.hero)::after{content:"";position:absolute;z-index:0;background:rgba(255,255,255,.52);border-radius:50%;filter:blur(1px)}
+body>div:first-of-type:not(.hero)::before{width:240px;height:66px;left:5%;top:29px;box-shadow:45px -19px 0 12px rgba(255,255,255,.32)}
+body>div:first-of-type:not(.hero)::after{width:170px;height:52px;right:6%;top:72px;box-shadow:-25px -16px 0 10px rgba(255,255,255,.25)}
+body>div:first-of-type:not(.hero)>*{position:relative;z-index:1}
+body>div:first-of-type:not(.hero) img{border:4px solid #fff9ec!important;border-radius:25px!important;box-shadow:0 9px 0 #0d8d9b,0 16px 25px #21536638!important}
+body>div:first-of-type:not(.hero) h1{text-shadow:0 3px 0 #ffffffbd;font-weight:900;letter-spacing:-.035em}
+body>div:first-of-type:not(.hero) p{font-weight:700}
+body>div:nth-of-type(2):not(.hero){width:calc(100% - 32px);max-width:880px!important;margin:30px auto 48px!important;padding:clamp(22px,4vw,44px)!important;background:#fffdf8!important;border:3px solid #fff!important;border-radius:29px!important;box-shadow:0 10px 0 #80cdd6,0 21px 34px #316c7529!important;line-height:1.7}
+body>div:nth-of-type(2) h2{color:#116a7b;font-size:clamp(25px,3vw,34px);line-height:1.2}
+body>div:nth-of-type(2) h3{color:#166777;margin-top:1.5em}
+body>div:nth-of-type(2) hr{border:0;border-top:2px solid #d5edf0}
+body>div:nth-of-type(2) a[href="https://www.storysheetapp.com/"]{display:inline-block!important;padding:13px 23px!important;border:2px solid #145a69!important;border-radius:16px!important;background:linear-gradient(#ffb34e,#ff8a26)!important;color:#173c47!important;font-weight:800!important;text-decoration:none!important;box-shadow:0 5px 0 #c3661b,0 10px 18px #c3661b33!important;transition:transform .15s}
+body>div:nth-of-type(2) a[href="https://www.storysheetapp.com/"]:hover{transform:translateY(-2px)}
+body>div:last-of-type:not(:nth-of-type(2)){color:#356772!important}
+body:has(>header.hero) .hero{background:radial-gradient(ellipse at 12% 16%,#fffaf0 0%,transparent 23%),radial-gradient(ellipse at 87% 18%,#fffdf4 0%,transparent 25%),linear-gradient(145deg,#81d8f2 0%,#c0effb 54%,#ffd294 100%)}
+body:has(>header.hero) .home-link,body:has(>header.hero) .cta,body:has(>header.hero) .card,body:has(>header.hero) .use{border:2px solid #fff;box-shadow:0 6px 0 #68afbc,0 15px 25px #28667b25;border-radius:19px}
+body:has(>header.hero) .cta.primary{background:linear-gradient(180deg,#ffae49,#f77d20);color:#173b45;border-color:#ffefc9;box-shadow:0 6px 0 #b75b17,0 15px 25px #7c482b2c}
+body:has(>header.hero) .cta.secondary,body:has(>header.hero) .home-link{background:#fffaf0}
+body:has(>header.hero) .card{background:#fffdf8}
+body:has(>header.hero) .story-band{background:linear-gradient(145deg,#0f7789,#155268)}
+body:has(>header.hero) .step{background:#ffffff16;border:2px solid #90dfec66;box-shadow:0 6px 0 #083f502a}
+body:has(>header.hero) .final{border:3px solid #ffe8bb;box-shadow:0 8px 0 #bc641d,0 22px 35px #81533340}
+@media(max-width:600px){body>div:first-of-type:not(.hero){padding:32px 14px 38px!important}body>div:nth-of-type(2):not(.hero){width:calc(100% - 20px);padding:24px!important;margin:20px auto 32px!important}}
