@@ -26,3 +26,48 @@ body:has(>header.hero) .story-band{background:linear-gradient(145deg,#0f7789,#15
 body:has(>header.hero) .step{background:#ffffff16;border:2px solid #90dfec66;box-shadow:0 6px 0 #083f502a}
 body:has(>header.hero) .final{border:3px solid #ffe8bb;box-shadow:0 8px 0 #bc641d,0 22px 35px #81533340}
 @media(max-width:600px){body>div:first-of-type:not(.hero){padding:32px 14px 38px!important}body>div:nth-of-type(2):not(.hero){width:calc(100% - 20px);padding:24px!important;margin:20px auto 32px!important}}
+
+/* Larger dimensional feature artwork and a more compact homepage layout */
+body:has(>header.hero) .hero{min-height:unset;padding-bottom:58px}
+body:has(>header.hero) .hero-grid{margin-top:42px;gap:38px}
+body:has(>header.hero) .section{padding-top:48px;padding-bottom:48px}
+body:has(>header.hero) .section-head{margin-bottom:28px}
+body:has(>header.hero) .features{gap:16px}
+body:has(>header.hero) .card{padding:22px 24px 24px;overflow:hidden;position:relative}
+body:has(>header.hero) .card .icon{
+  width:100px;height:100px;display:grid;place-items:center;
+  font-size:61px;line-height:1;margin:0 0 19px;
+  background:radial-gradient(circle at 24% 18%,#ffffff 0%,#fff4ce 36%,#f8c78b 100%);
+  border:4px solid #fff9ec;border-radius:31px;
+  box-shadow:inset -6px -8px 11px #a9693540,inset 5px 6px 10px #ffffffc0,0 9px 0 #dfa266,0 15px 20px #835a4138;
+  text-shadow:2px 4px 3px #785b5435;
+  transform:rotate(-4deg);
+}
+body:has(>header.hero) .card:nth-child(2n) .icon{transform:rotate(4deg);background:radial-gradient(circle at 23% 15%,#fff 0%,#d9f7fc 35%,#6cc9d9 100%);box-shadow:inset -6px -8px 12px #27768942,inset 5px 6px 12px #ffffffdd,0 9px 0 #4fa8b7,0 15px 20px #32677338}
+body:has(>header.hero) .card:nth-child(3n) .icon{background:radial-gradient(circle at 23% 15%,#fff 0%,#fff1df 35%,#ffab6b 100%)}
+body:has(>header.hero) .uses{gap:14px}
+body:has(>header.hero) .use{
+  min-height:167px;padding:18px 20px 20px;justify-content:space-between;
+  background:linear-gradient(155deg,#fffdfa,#ffedcf);
+}
+body:has(>header.hero) .use span{
+  display:grid;place-items:center;width:84px;height:84px;
+  font-size:52px;line-height:1;margin-bottom:16px;
+  border:3px solid #fff;border-radius:26px;
+  background:linear-gradient(145deg,#edfbff,#8cd9e5);
+  box-shadow:inset -5px -7px 10px #428a9d30,0 7px 0 #65acb6,0 12px 16px #345c652e;
+  transform:rotate(-4deg);
+}
+body:has(>header.hero) .use:nth-child(even) span{transform:rotate(4deg);background:linear-gradient(145deg,#fff8e5,#ffbd7a);box-shadow:inset -5px -7px 10px #ae743f30,0 7px 0 #dba069,0 12px 16px #795c422e}
+body:has(>header.hero) .use b{font-size:20px}
+body:has(>header.hero) .step{min-height:165px;padding:19px}
+body:has(>header.hero) .step-number{margin-bottom:12px;width:44px;height:44px;box-shadow:0 5px 0 #bb5e21}
+body:has(>header.hero) .final{margin-top:8px;margin-bottom:50px;padding:38px 24px}
+@media(max-width:850px){body:has(>header.hero) .hero-grid{gap:30px}}
+@media(max-width:560px){
+  body:has(>header.hero) .section{padding-top:36px;padding-bottom:36px}
+  body:has(>header.hero) .hero-grid{margin-top:28px}
+  body:has(>header.hero) .card .icon{width:88px;height:88px;font-size:55px}
+  body:has(>header.hero) .use{min-height:138px}
+  body:has(>header.hero) .use span{width:75px;height:75px;font-size:47px}
+}
